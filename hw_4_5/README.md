@@ -1,7 +1,7 @@
-# Differential gene expression assesment
+# Differential gene expression assessment
 
 **homework_lecture_5.ipynb**
-Colab notebook with some practice on differential gene expression assesment.
+Colab notebook with some practice on differential gene expression assessment.
 
 **compare_expressions.py**
 
