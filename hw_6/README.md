@@ -9,10 +9,11 @@ Compare genes expressions between two cell types.\
 Input:\
 --first_cell_type_expressions_path: Path to the table (csv file) with gene expressions of first cell type (required!)\
 --second_cell_type_expressions_path: Path to the table (csv file) with gene expressions of second cell type (required!)\
---save_results_table: Path to the output table with gene expressions comparison results (default="expression_comparison_results.csv")
+--save_results_table: Path to the output table with gene expressions comparison results (default="expression_comparison_results.csv")\
+--correction_metod: The name of the method for correcting for multiple comparisons implemented in statsmodels (default=None)
 
 Output:\
-You get a table (.csv file) with confidence intervals test results, z-test results, z-test p-values, and a difference between mean expressions.
+You get a table (.csv file) with confidence intervals test results, z-test results, z-test p-values (corrected if correction_metod is indicated), and a difference between mean expressions.
 
 ### Requirements
 python>=3.6
@@ -36,5 +37,6 @@ Run:
 python3 compare_expressions.py \
 --first_cell_type_expressions_path files_for_test/b_cells_expression_data.csv \
 --second_cell_type_expressions_path files_for_test/nk_cells_expression_data.csv \
---save_results_table path_to_your_awesome_results.csv
+--save_results_table path_to_your_awesome_results.csv \
+--correction_method the_method_name
 ~~~
